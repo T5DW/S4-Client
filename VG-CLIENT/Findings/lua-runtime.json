@@ -1,0 +1,347 @@
+{
+  "file": "Vanguard_dump.exe",
+  "sha256": "9e3cc7d78ea399b197c264e37514becef0eeeb65687bd48c3a1b7724126b46a3",
+  "image_base": "0x7ff7d0c60000",
+  "sections": [
+    [
+      ".text",
+      4096,
+      123809792,
+      1536,
+      123807232,
+      1610612768
+    ],
+    [
+      ".rdata",
+      123813888,
+      5632000,
+      123808768,
+      5630464,
+      1073741888
+    ],
+    [
+      ".data",
+      129445888,
+      255131648,
+      129439232,
+      255129600,
+      3221225536
+    ],
+    [
+      ".pdata",
+      384577536,
+      1650688,
+      384568832,
+      1648640,
+      1073741888
+    ],
+    [
+      "_RDATA",
+      386228224,
+      94208,
+      386217472,
+      92160,
+      1073741888
+    ],
+    [
+      ".rsrc",
+      386322432,
+      2273280,
+      386309632,
+      2270720,
+      1073741888
+    ],
+    [
+      ".reloc",
+      388595712,
+      327680,
+      388580352,
+      324608,
+      1073741888
+    ],
+    [
+      ".idata",
+      388923392,
+      28672,
+      388904960,
+      25600,
+      3221225536
+    ],
+    [
+      ".text",
+      388952064,
+      98136064,
+      388930560,
+      98134016,
+      1610612768
+    ]
+  ],
+  "signatures": {
+    "Online_Loot_GetItemQuantity": {
+      "pattern": "E8 ? ? ? ? 48 8B 5C 24 ? 85 C0 0F 84",
+      "displacement_offset": 1,
+      "matches": [
+        {
+          "file_offset": "0x025474E1",
+          "match_rva": "0x02547EE1",
+          "target_rva": "0x041B4D30",
+          "preferred_va": "0x7FF7D4E14D30"
+        }
+      ],
+      "target_prefix": "40 57 41 54 41 56 41 57 48 83 ec 38 48 8d 41 40"
+    },
+    "lua_insert": {
+      "pattern": "48 63 C2 4C 8B C9 85 D2",
+      "displacement_offset": null,
+      "matches": [
+        {
+          "file_offset": "0x06F37F30",
+          "match_rva": "0x06F38930",
+          "target_rva": "0x06F38930",
+          "preferred_va": "0x7FF7D7B98930"
+        }
+      ],
+      "target_prefix": "48 63 c2 4c 8b c9 85 d2 7e 22 48 8d 50 ff 48 8b"
+    },
+    "lua_pushboolean": {
+      "pattern": "48 8B 41 ? 45 33 C0 85 D2",
+      "displacement_offset": null,
+      "matches": [
+        {
+          "file_offset": "0x06F384A0",
+          "match_rva": "0x06F38EA0",
+          "target_rva": "0x06F38EA0",
+          "preferred_va": "0x7FF7D7B98EA0"
+        }
+      ],
+      "target_prefix": "48 8b 41 28 45 33 c0 85 d2 41 0f 95 c0 49 ff c0"
+    },
+    "lua_pushcclosure": {
+      "pattern": "48 89 5C 24 ? 48 89 74 24 ? 57 48 83 EC ? 48 8B D9 49 63 F8 48 8B 49",
+      "displacement_offset": null,
+      "matches": [
+        {
+          "file_offset": "0x06F384D0",
+          "match_rva": "0x06F38ED0",
+          "target_rva": "0x06F38ED0",
+          "preferred_va": "0x7FF7D7B98ED0"
+        }
+      ],
+      "target_prefix": "48 89 5c 24 08 48 89 74 24 10 57 48 83 ec 20 48"
+    },
+    "lua_pushinteger": {
+      "pattern": "48 8B 41 ? C5 F8 57 C0 C4 E1 FB 2A C2",
+      "displacement_offset": null,
+      "matches": [
+        {
+          "file_offset": "0x06F38600",
+          "match_rva": "0x06F39000",
+          "target_rva": "0x06F39000",
+          "preferred_va": "0x7FF7D7B99000"
+        }
+      ],
+      "target_prefix": "48 8b 41 28 c5 f8 57 c0 c4 e1 fb 2a c2 c5 fb 11"
+    },
+    "lua_pushstring": {
+      "pattern": "48 89 5C 24 ? 57 48 83 EC ? 48 8B FA 48 8B D9 48 85 D2 75 ? 48 8B 41",
+      "displacement_offset": null,
+      "matches": [
+        {
+          "file_offset": "0x06F38740",
+          "match_rva": "0x06F39140",
+          "target_rva": "0x06F39140",
+          "preferred_va": "0x7FF7D7B99140"
+        }
+      ],
+      "target_prefix": "48 89 5c 24 08 57 48 83 ec 20 48 8b fa 48 8b d9"
+    },
+    "lua_pushvalue": {
+      "pattern": "40 53 48 83 EC ? 48 8B D9 E8 ? ? ? ? 48 8B 53 ? 48 8B 00",
+      "displacement_offset": null,
+      "matches": [
+        {
+          "file_offset": "0x06F38820",
+          "match_rva": "0x06F39220",
+          "target_rva": "0x06F39220",
+          "preferred_va": "0x7FF7D7B99220"
+        }
+      ],
+      "target_prefix": "40 53 48 83 ec 20 48 8b d9 e8 a2 e5 ff ff 48 8b"
+    },
+    "lua_remove": {
+      "pattern": "4C 8B C1 85 D2 7E ? 48 8B 41 ? 48 8B 49",
+      "displacement_offset": null,
+      "matches": [
+        {
+          "file_offset": "0x06F38AB0",
+          "match_rva": "0x06F394B0",
+          "target_rva": "0x06F394B0",
+          "preferred_va": "0x7FF7D7B994B0"
+        }
+      ],
+      "target_prefix": "4c 8b c1 85 d2 7e 24 48 8b 41 20 48 8b 49 28 48"
+    },
+    "lua_settop": {
+      "pattern": "40 53 48 83 EC ? 48 63 C2 48 8B D9 85 D2",
+      "displacement_offset": null,
+      "matches": [
+        {
+          "file_offset": "0x06F38E40",
+          "match_rva": "0x06F39840",
+          "target_rva": "0x06F39840",
+          "preferred_va": "0x7FF7D7B99840"
+        }
+      ],
+      "target_prefix": "40 53 48 83 ec 20 48 63 c2 48 8b d9 85 d2 78 77"
+    },
+    "lua_tointeger32": {
+      "pattern": "48 89 5C 24 ? 57 48 83 EC ? 8B FA 48 8B D9 E8 ? ? ? ? 85 C0 75",
+      "displacement_offset": null,
+      "matches": [
+        {
+          "file_offset": "0x047EB8C0",
+          "match_rva": "0x047EC2C0",
+          "target_rva": "0x047EC2C0",
+          "preferred_va": "0x7FF7D544C2C0"
+        }
+      ],
+      "target_prefix": "48 89 5c 24 08 57 48 83 ec 20 8b fa 48 8b d9 e8"
+    },
+    "lua_tolstring": {
+      "pattern": "48 89 5C 24 ? 48 89 74 24 ? 57 48 83 EC ? 49 8B F8 8B DA 48 8B F1",
+      "displacement_offset": null,
+      "matches": [
+        {
+          "file_offset": "0x06F39080",
+          "match_rva": "0x06F39A80",
+          "target_rva": "0x06F39A80",
+          "preferred_va": "0x7FF7D7B99A80"
+        }
+      ],
+      "target_prefix": "48 89 5c 24 08 48 89 74 24 10 57 48 83 ec 20 49"
+    },
+    "luaL_loadbuffer": {
+      "pattern": "4C 8B DC 53 57 48 81 EC ? ? ? ? 48 8B 05 ? ? ? ? 48 33 C4 48 89 84 24 ? ? ? ? 4D 85 C9",
+      "displacement_offset": null,
+      "matches": [
+        {
+          "file_offset": "0x06F3D9D0",
+          "match_rva": "0x06F3E3D0",
+          "target_rva": "0x06F3E3D0",
+          "preferred_va": "0x7FF7D7B9E3D0"
+        }
+      ],
+      "target_prefix": "4c 8b dc 53 57 48 81 ec f8 00 00 00 48 8b 05 25"
+    },
+    "LuaShared_PCall": {
+      "pattern": "E8 ? ? ? ? 8B F8 85 C0 74 ? 4C 8D 44 24",
+      "displacement_offset": 1,
+      "matches": [
+        {
+          "file_offset": "0x0629064C",
+          "match_rva": "0x0629104C",
+          "target_rva": "0x04168670",
+          "preferred_va": "0x7FF7D4DC8670"
+        }
+      ],
+      "target_prefix": "48 89 5c 24 08 48 89 6c 24 10 48 89 74 24 18 48"
+    },
+    "LUI_CoD_Init": {
+      "pattern": "E8 ? ? ? ? 83 3D ? ? ? ? ? 75 ? C7 05 ? ? ? ? ? ? ? ? E8 ? ? ? ? 48 8D 15",
+      "displacement_offset": 1,
+      "matches": [
+        {
+          "file_offset": "0x0396662C",
+          "match_rva": "0x0396702C",
+          "target_rva": "0x048904C0",
+          "preferred_va": "0x7FF7D54F04C0"
+        },
+        {
+          "file_offset": "0x03966691",
+          "match_rva": "0x03967091",
+          "target_rva": "0x048904C0",
+          "preferred_va": "0x7FF7D54F04C0"
+        }
+      ],
+      "target_prefix": "40 55 53 56 41 55 41 57 48 8d 6c 24 a0 48 81 ec"
+    },
+    "LUI_CoD_Shutdown": {
+      "pattern": "E8 ? ? ? ? E8 ? ? ? ? 33 D2 0F B6 C8",
+      "displacement_offset": 1,
+      "matches": [
+        {
+          "file_offset": "0x0396661D",
+          "match_rva": "0x0396701D",
+          "target_rva": "0x0489BAF0",
+          "preferred_va": "0x7FF7D54FBAF0"
+        },
+        {
+          "file_offset": "0x03966682",
+          "match_rva": "0x03967082",
+          "target_rva": "0x0489BAF0",
+          "preferred_va": "0x7FF7D54FBAF0"
+        }
+      ],
+      "target_prefix": "40 53 48 83 ec 20 48 8d 0d 93 28 00 03 e8 de a6"
+    },
+    "Lua_CoD_PushFunctionToGlobalTable": {
+      "pattern": "48 89 5C 24 08 57 48 83 EC 20 49 8B D8 48 8B F9 E8 ? ? ? ? 45 33 C0 48 8B D3 48 8B CF E8 ? ? ? ? BA EE D8 FF FF 48",
+      "displacement_offset": null,
+      "matches": [
+        {
+          "file_offset": "0x062976B0",
+          "match_rva": "0x062980B0",
+          "target_rva": "0x062980B0",
+          "preferred_va": "0x7FF7D6EF80B0"
+        }
+      ],
+      "target_prefix": "48 89 5c 24 08 57 48 83 ec 20 49 8b d8 48 8b f9"
+    },
+    "lua_loadx": {
+      "pattern": "4C 8B DC 53 57 48 81 EC ? ? ? ? 48 8B 05 ? ? ? ? 48 33 C4 48 89 84 24 ? ? ? ? 49 89 53",
+      "displacement_offset": null,
+      "matches": [
+        {
+          "file_offset": "0x06F3DF60",
+          "match_rva": "0x06F3E960",
+          "target_rva": "0x06F3E960",
+          "preferred_va": "0x7FF7D7B9E960"
+        }
+      ],
+      "target_prefix": "4c 8b dc 53 57 48 81 ec e8 00 00 00 48 8b 05 95"
+    },
+    "luaL_registerXHash": {
+      "pattern": "48 89 5C 24 ? 48 89 74 24 ? 57 48 83 EC ? 49 8B D8 48 8B F2 4C 8B C2",
+      "displacement_offset": null,
+      "matches": [
+        {
+          "file_offset": "0x04167FF0",
+          "match_rva": "0x041689F0",
+          "target_rva": "0x041689F0",
+          "preferred_va": "0x7FF7D4DC89F0"
+        }
+      ],
+      "target_prefix": "48 89 5c 24 08 48 89 74 24 10 57 48 83 ec 20 49"
+    }
+  },
+  "layout_evidence": {
+    "CurrentVM": {
+      "rva": "0x161C18A0",
+      "reference_rva": "0x04890B2A",
+      "protected_call_rva": "0x04890B36"
+    },
+    "InitializingVM": {
+      "rva": "0x162755AC",
+      "set_rva": "0x048905B8",
+      "clear_rva": "0x048928C1"
+    },
+    "stack_base_offset": "0x20",
+    "stack_top_offset": "0x28",
+    "value_size": 8,
+    "stack_evidence_rvas": [
+      "0x06F3893E",
+      "0x06F38946",
+      "0x06F39890"
+    ]
+  }
+}

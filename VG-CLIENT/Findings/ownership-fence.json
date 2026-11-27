@@ -1,0 +1,18 @@
+{
+  "dump_sha256": "9e3cc7d78ea399b197c264e37514becef0eeeb65687bd48c3a1b7724126b46a3",
+  "symbol": "LUI_CoD_LuaCall_HasOwnershipStatusFenceTimedOut",
+  "lua_api": "Fences.HasOwnershipStatusFenceTimedOut",
+  "callback_rva": "0x06DCCAB0",
+  "name_hash": "0x3887F2F7D3EA0512",
+  "table_rva": "0x077E4C80",
+  "entry_rva": "0x077E4E00",
+  "library_name_rva": "0x0AD5C35C",
+  "registration_call_rva": "0x06DCD84A",
+  "registrar_rva": "0x041689F0",
+  "native_predicate_rva": "0x025C8860",
+  "pushboolean_call_rva": "0x06DCCAC4",
+  "pushboolean_rva": "0x06F38EA0",
+  "callback_prefix": "40 53 48 83 ec 20 48 8b d9 e8 a2 bd 7f fb 0f b6",
+  "native_detour": "Lua_ReturnTrue; pushes true, returns one result",
+  "validated": true
+}

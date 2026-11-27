@@ -1,0 +1,33 @@
+{
+  "dump_sha256": "9e3cc7d78ea399b197c264e37514becef0eeeb65687bd48c3a1b7724126b46a3",
+  "matches": {
+    "Live_IsUserSignedInToDemonware": [
+      {
+        "file_offset": "0x35a9560",
+        "match_rva": "0x35a9f60",
+        "target_rva": "0x35a9f60",
+        "entry_bytes": "40 53 48 83 ec 20 8b d9 e8 d3 e0 f8 fe 80 b8 d5 00 00 00 00 75 32 e8 e5",
+        "function_ranges": [
+          [
+            "0x35a9f60",
+            "0x35a9fb0"
+          ]
+        ]
+      }
+    ],
+    "Live_IsConnectedToDemonware": [
+      {
+        "file_offset": "0x3546c5f",
+        "match_rva": "0x354765f",
+        "target_rva": "0x35a6050",
+        "entry_bytes": "48 83 ec 28 e8 a7 cf 79 00 83 f8 02 0f 94 c0 48 83 c4 28 c3 88 84 24 61",
+        "function_ranges": [
+          [
+            "0x35a6050",
+            "0x35a6064"
+          ]
+        ]
+      }
+    ]
+  }
+}

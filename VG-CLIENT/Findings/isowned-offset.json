@@ -1,0 +1,19 @@
+{
+  "dump_sha256": "9e3cc7d78ea399b197c264e37514becef0eeeb65687bd48c3a1b7724126b46a3",
+  "address_kind": "RVA, add loaded game module base",
+  "symbol": "Loot.IsOwned",
+  "offset_constant": "s4::offsets::LUI_Loot_IsOwned",
+  "callback_rva": "0x041B2370",
+  "callback_prefix": "48 89 5c 24 08 57 48 83 ec 20 48 8b f9 e8 2e 65",
+  "name_hash": "0x0B7D304F1F31158E",
+  "table_rva": "0x076BFB30",
+  "table_entry_rva": "0x076BFB50",
+  "library": "Loot",
+  "library_name_rva": "0x0A8DADB4",
+  "registration_call_rva": "0x041B220C",
+  "registrar_rva": "0x041689F0",
+  "quantity_call_rva": "0x041B2400",
+  "quantity_target_rva": "0x041B4D30",
+  "lua_override_installed": false,
+  "validated": true
+}

@@ -1,0 +1,133 @@
+{
+  "toolchain": "Zig 0.17.1 / Clang 22.1.8",
+  "target": "x86_64-windows-gnu",
+  "configuration": "Release",
+  "linker_flags": "-lucrtbase",
+  "dll_sha256": "00db28b315c99d96062338cf63d74c10d3c964cc7b9937f7e906c8d349829a3a",
+  "dll_bytes": 1314304,
+  "native_tests": "passed: commands, Lua discovery/migration, 100000-call autoload gate regression, concurrent gate scheduling, VM wrappers and error stack restoration, loot, logger, Lua bridges, stats, profile and auth lifecycle",
+  "lua51_tests": [
+    "global MenuBuilder",
+    "LUI.MenuBuilder",
+    "late global builder without blocking other scripts",
+    "late LUI builder",
+    "Start Match identified by label text",
+    "button ordering/navigation/click logging",
+    "bounded construction watching without timers",
+    "duplicate prevention"
+  ],
+  "party_signatures": {
+    "requested": 11,
+    "unique_matches": 11,
+    "targets_added_to": "Src/Client/offsets.hpp and offsets.cpp"
+  },
+  "autoload_fix": "No MenuBuilder gate, repeated Lua probe, or per-callback bootstrap after completion. Sources cached at installation/init/reload.",
+  "version_api_exports_checked": 16,
+  "game_version_api_imports_satisfied": [
+    "GetFileVersionInfoA",
+    "GetFileVersionInfoSizeA",
+    "GetFileVersionInfoSizeW",
+    "GetFileVersionInfoW",
+    "VerQueryValueA"
+  ],
+  "live_game_tested": false,
+  "strict_globals_test": "passed: exact LUI global-creation error reproduced; explicit namespace registration, local addon reference and legacy assignment compatibility verified across all five menu fixtures",
+  "lua51_fixture_variants_passed": 12,
+  "control_lookup_tests": "passed: named fields/collections without child iterators, localization text in properties, linked children and text labels, direct sibling ordering, one diagnostic dump per deferred menu",
+  "addon_revision": "systemlink-panels-3",
+  "late_panel_tests": "passed in all 12 Lua fixture variants: uploaded outer hierarchy, late registered panel, direct registry invocation, native/class attachment bypassing instance hooks, order below Start Match, close cleanup and 96-construction budget exhaustion",
+  "diagnostics": "Tabs/action branches prioritized; player detail/helper branches omitted; maximum 96 focused nodes per bounded diagnostic phase",
+  "systemlink_party_routing": "Verified existing routing: g_partyData in Systemlink; original trampoline outside. Native regression covers leaving/reentering Systemlink. No new bot spawning behavior is claimed.",
+  "systemlink_requested_signatures": {
+    "Live_GetGameParty": "0x035A3550",
+    "g_partyData": "0x0F566B48",
+    "unique_matches": 2
+  },
+  "auth_initialization_hook_ownership": {
+    "entry": "RunAuthInitialization(bool manual), Src/Client/postload.cpp",
+    "after": "auth::setup_local_user_data()",
+    "installs": [
+      "s4::patches::systemlink_lobby::install()",
+      "loot::install()"
+    ],
+    "cleanup": "StopAuthHook()",
+    "separate_unpack_installers_removed": true
+  },
+  "auth_hook_installation_tests": "Passed native lifecycle integration: local data readiness, partial-install retry without duplication, all hooks installed before StatsInit; ownership timeout callback pushes true; repeated auth idempotent; StopAuthHook removes all 10 hooks.",
+  "unlockall": {
+    "default": 1,
+    "zero": "native quantity=0",
+    "one": "native quantity=1",
+    "runtime_toggle": "quantity callback reads atomic without reinstall",
+    "persisted": false,
+    "isowned_lua_override": false,
+    "tests": "passed: original Loot registration left untouched, quantity transitions 1/0/1, command validation, startup/auth lifecycle and full native suite"
+  },
+  "fov_scan": {
+    "validated": true,
+    "cg_fov_pointer_slot_rva": "0x165B0C88",
+    "cg_fovScale_pointer_slot_rva": "0x165B0C98",
+    "Dvar_RegisterFloat_rva": "0x03252180",
+    "registration_paths_per_name": 2,
+    "runtime_float_write_added": true
+  },
+  "fov_commands": {
+    "cg_fov_range": [
+      1,
+      110
+    ],
+    "cg_fovscale_range": [
+      0.2,
+      2
+    ],
+    "native_setter_rva": "0x03253B70",
+    "source": 0,
+    "thread": "PlatformAuthFrameStub, after auth initialization attempt",
+    "raw_pointer_or_value_writes": false,
+    "persisted": false,
+    "tests": "passed: finite/range/whole-input parser validation, missing args, latest-value coalescing, pending until ready, submit once, clear on shutdown; full native suite passed",
+    "live_in_game_tested": false
+  },
+  "isowned_offset": {
+    "callback_rva": "0x041B2370",
+    "constant": "s4::offsets::LUI_Loot_IsOwned",
+    "verified_from": "hashed Loot registration entry + native quantity call",
+    "new_detour_installed": false
+  },
+  "ownership_timeout_fence": {
+    "lua_api": "Fences.HasOwnershipStatusFenceTimedOut",
+    "callback_rva": "0x06DCCAB0",
+    "native_predicate_rva": "0x025C8860",
+    "native_detour": "Lua_ReturnTrue: push boolean true and return one Lua result",
+    "installed_in": "RunAuthInitialization",
+    "independent_of_unlockall": true,
+    "tests": "passed: callback and pushboolean guards, rollback/retry, one true result, idempotent install/shutdown, auth lifecycle",
+    "live_game_tested": false
+  },
+  "latest_change_validation": {
+    "change": "Automatically execute menu MainMenuOffline once after successful auth initialization, on the auth frame after the native frame returns.",
+    "release_cross_build": "passed: Zig x86_64-windows-gnu through CMake",
+    "source_checks": "passed: single success-only scheduling site, atomic one-shot consumption, command dispatch after native frame",
+    "prior_tests": "Other test entries describe previous archive validation; not rerun for this change.",
+    "live_game_tested": false
+  },
+  "auth_lua_true": {
+    "entry": "RunAuthInitialization after local controller data ready, before native sign-in",
+    "callbacks": {
+      "Engine.IsPremiumPlayer": "0x062F1F10",
+      "Engine.IsLocalPlayAllowed": "0x062FC330",
+      "Fences.OfflineDataFetched": "0x06DCC680"
+    },
+    "result": "Lua true; one result",
+    "rva_source": "user-supplied; no independent executable verification in this update",
+    "existing_lua_configuration": "preserved from uploaded ZIP"
+  },
+  "demonware_signin_hook_entry": "RunAuthInitialization: ForceTrue()",
+  "gamertag_hash": {
+    "multiplier": 31,
+    "assignment": "Assign_UsernameAndXUID, called by auth::setup_local_user_data",
+    "username_changes": "AssignUsername uses same helper"
+  },
+  "online_fence_patches_present": false,
+  "bool_dvar_patches_present": false
+}

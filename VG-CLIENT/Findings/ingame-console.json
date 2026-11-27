@@ -1,0 +1,193 @@
+{
+  "file": "Vanguard_dump.exe",
+  "sha256": "9e3cc7d78ea399b197c264e37514becef0eeeb65687bd48c3a1b7724126b46a3",
+  "image_base": "0x7ff7d0c60000",
+  "sections": [
+    [
+      ".text",
+      4096,
+      123809792,
+      1536,
+      123807232,
+      1610612768
+    ],
+    [
+      ".rdata",
+      123813888,
+      5632000,
+      123808768,
+      5630464,
+      1073741888
+    ],
+    [
+      ".data",
+      129445888,
+      255131648,
+      129439232,
+      255129600,
+      3221225536
+    ],
+    [
+      ".pdata",
+      384577536,
+      1650688,
+      384568832,
+      1648640,
+      1073741888
+    ],
+    [
+      "_RDATA",
+      386228224,
+      94208,
+      386217472,
+      92160,
+      1073741888
+    ],
+    [
+      ".rsrc",
+      386322432,
+      2273280,
+      386309632,
+      2270720,
+      1073741888
+    ],
+    [
+      ".reloc",
+      388595712,
+      327680,
+      388580352,
+      324608,
+      1073741888
+    ],
+    [
+      ".idata",
+      388923392,
+      28672,
+      388904960,
+      25600,
+      3221225536
+    ],
+    [
+      ".text",
+      388952064,
+      98136064,
+      388930560,
+      98134016,
+      1610612768
+    ]
+  ],
+  "signatures": {
+    "EndRenderCommandList": {
+      "pattern": "48 8B 15 ? ? ? ? 45 33 D2 4C 8B 0D ? ? ? ? 4C 8B 42 08 49 8D 48 01",
+      "displacement_offset": null,
+      "matches": [
+        {
+          "file_offset": "0x03FD0EC0",
+          "match_rva": "0x03FD18C0",
+          "target_rva": "0x03FD18C0",
+          "preferred_va": "0x7FF7D4C318C0"
+        }
+      ],
+      "target_prefix": "48 8b 15 c1 d3 23 10 45 33 d2 4c 8b 0d 9f d3 23"
+    },
+    "AddBaseDrawTextCmd": {
+      "pattern": "E8 ? ? ? ? 48 8B D0 48 85 C0 0F 84 ? ? ? ? 48 8B 8C 24",
+      "displacement_offset": 1,
+      "matches": [
+        {
+          "file_offset": "0x03FCD762",
+          "match_rva": "0x03FCE162",
+          "target_rva": "0x03FC70A0",
+          "preferred_va": "0x7FF7D4C270A0"
+        }
+      ],
+      "target_prefix": "4c 89 44 24 18 89 54 24 10 53 56 57 41 54 41 55"
+    },
+    "R_TextWidth": {
+      "pattern": "48 83 EC ? C5 FA 10 05 ? ? ? ? 45 8B 48",
+      "displacement_offset": null,
+      "matches": [
+        {
+          "file_offset": "0x03F0E900",
+          "match_rva": "0x03F0F300",
+          "target_rva": "0x03F0F300",
+          "preferred_va": "0x7FF7D4B6F300"
+        }
+      ],
+      "target_prefix": "48 83 ec 48 c5 fa 10 05 18 01 99 03 45 8b 48 08"
+    },
+    "R_RegisterFont": {
+      "pattern": "E8 ? ? ? ? 48 6B 17",
+      "displacement_offset": 1,
+      "matches": [
+        {
+          "file_offset": "0x03F0CE85",
+          "match_rva": "0x03F0D885",
+          "target_rva": "0x03F0E9A0",
+          "preferred_va": "0x7FF7D4B6E9A0"
+        }
+      ],
+      "target_prefix": "40 57 41 54 41 55 41 56 41 57 48 81 ec 60 06 00"
+    },
+    "UI_FillRectPhysical": {
+      "pattern": "48 83 EC ? 48 8B 05 ? ? ? ? 48 85 C0 74 ? 48 89 44 24 ? 48 8B 84 24 ? ? ? ? C5 D8 57 E4",
+      "displacement_offset": null,
+      "matches": [
+        {
+          "file_offset": "0x042E7AD0",
+          "match_rva": "0x042E84D0",
+          "target_rva": "0x042E84D0",
+          "preferred_va": "0x7FF7D4F484D0"
+        }
+      ],
+      "target_prefix": "48 83 ec 58 48 8b 05 25 50 b8 11 48 85 c0 74 33"
+    },
+    "scrPlaceFull_realViewportSize": {
+      "pattern": "48 8D 0D ? ? ? ? 8B 01 89 02",
+      "displacement_offset": 3,
+      "matches": [
+        {
+          "file_offset": "0x049B635C",
+          "match_rva": "0x049B6D5C",
+          "target_rva": "0x11934C28",
+          "preferred_va": "0x7FF7E2594C28"
+        }
+      ]
+    },
+    "sharedUiInfo_assets": {
+      "pattern": "48 89 05 ? ? ? ? 48 8D 0D ? ? ? ? E8 ? ? ? ? B2 ? 48 89 05 ? ? ? ? 48 8D 0D ? ? ? ? E8 ? ? ? ? 80 3D",
+      "displacement_offset": 3,
+      "matches": [
+        {
+          "file_offset": "0x042EBC90",
+          "match_rva": "0x042EC690",
+          "target_rva": "0x15E6D4D0",
+          "preferred_va": "0x7FF7E6ACD4D0"
+        }
+      ]
+    }
+  },
+  "additional_evidence": {
+    "EndRenderCommandList": {
+      "classification": "Inferred from terminator command and command-buffer reset in disassembly",
+      "terminator_write_rva": "0x03FD1921",
+      "terminator_bytes": "c7 01 00 00 04 00",
+      "caller_rva": "0x03963C80",
+      "note": "Draw before original emits command ID 0 and resets current command list."
+    },
+    "CachedFont": {
+      "slot_rva": "0x15E6D520",
+      "asset_offset": "0x50",
+      "font_registration_call_rva": "0x04302ABC",
+      "result_store_rva": "0x04302AC7",
+      "pixel_height_offset": "0x08",
+      "height_evidence_rva": "0x03F0F30C"
+    },
+    "CommandBuffer": {
+      "current_pointer_rva": "0x1420EC88",
+      "capacity_rva": "0x1420EC70",
+      "used_offset": "0x08",
+      "allocation_evidence_rva": "0x03FC7409"
+    }
+  }
+}

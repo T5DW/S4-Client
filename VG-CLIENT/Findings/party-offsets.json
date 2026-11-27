@@ -1,0 +1,213 @@
+{
+  "file": "Vanguard_dump.exe",
+  "sha256": "9e3cc7d78ea399b197c264e37514becef0eeeb65687bd48c3a1b7724126b46a3",
+  "image_base": "0x7ff7d0c60000",
+  "sections": [
+    [
+      ".text",
+      4096,
+      123809792,
+      1536,
+      123807232,
+      1610612768
+    ],
+    [
+      ".rdata",
+      123813888,
+      5632000,
+      123808768,
+      5630464,
+      1073741888
+    ],
+    [
+      ".data",
+      129445888,
+      255131648,
+      129439232,
+      255129600,
+      3221225536
+    ],
+    [
+      ".pdata",
+      384577536,
+      1650688,
+      384568832,
+      1648640,
+      1073741888
+    ],
+    [
+      "_RDATA",
+      386228224,
+      94208,
+      386217472,
+      92160,
+      1073741888
+    ],
+    [
+      ".rsrc",
+      386322432,
+      2273280,
+      386309632,
+      2270720,
+      1073741888
+    ],
+    [
+      ".reloc",
+      388595712,
+      327680,
+      388580352,
+      324608,
+      1073741888
+    ],
+    [
+      ".idata",
+      388923392,
+      28672,
+      388904960,
+      25600,
+      3221225536
+    ],
+    [
+      ".text",
+      388952064,
+      98136064,
+      388930560,
+      98134016,
+      1610612768
+    ]
+  ],
+  "signatures": {
+    "Live_GetGameParty": {
+      "pattern": "E8 ? ? ? ? 0F B6 D3 48 8B C8 E8 ? ? ? ? E9",
+      "displacement_offset": 1,
+      "matches": [
+        {
+          "file_offset": "0x05F6075A",
+          "match_rva": "0x05F6115A",
+          "target_rva": "0x035A3550",
+          "preferred_va": "0x7FF7D4203550"
+        }
+      ]
+    },
+    "Party_AreWeServer": {
+      "pattern": "E8 ? ? ? ? 85 C0 74 ? F6 45",
+      "displacement_offset": 1,
+      "matches": [
+        {
+          "file_offset": "0x02783B64",
+          "match_rva": "0x02784564",
+          "target_rva": "0x02707E90",
+          "preferred_va": "0x7FF7D3367E90"
+        }
+      ]
+    },
+    "Party_CountAllMembersEvenIfInactive": {
+      "pattern": "48 89 6C 24 ? 57 48 83 EC ? 33 FF 48 8B E9 39 B9 ? ? ? ? 74",
+      "displacement_offset": null,
+      "matches": [
+        {
+          "file_offset": "0x033D5390",
+          "match_rva": "0x033D5D90",
+          "target_rva": "0x033D5D90",
+          "preferred_va": "0x7FF7D4035D90"
+        }
+      ]
+    },
+    "Party_GetGametype": {
+      "pattern": "48 83 EC ? E8 ? ? ? ? 80 38",
+      "displacement_offset": null,
+      "matches": [
+        {
+          "file_offset": "0x02721380",
+          "match_rva": "0x02721D80",
+          "target_rva": "0x02721D80",
+          "preferred_va": "0x7FF7D3381D80"
+        }
+      ]
+    },
+    "Party_IsRunning": {
+      "pattern": "E8 ? ? ? ? 85 C0 0F 85 ? ? ? ? E8 ? ? ? ? 84 C0 0F 85 ? ? ? ? 41 B8",
+      "displacement_offset": 1,
+      "matches": [
+        {
+          "file_offset": "0x02739FC2",
+          "match_rva": "0x0273A9C2",
+          "target_rva": "0x02726700",
+          "preferred_va": "0x7FF7D3386700"
+        }
+      ]
+    },
+    "PartyAtomic_AcceptInviteMP": {
+      "pattern": "E8 ? ? ? ? E8 ? ? ? ? 84 C0 74 ? 48 8B 93",
+      "displacement_offset": 1,
+      "matches": [
+        {
+          "file_offset": "0x0252FD20",
+          "match_rva": "0x02530720",
+          "target_rva": "0x03BCFA40",
+          "preferred_va": "0x7FF7D482FA40"
+        }
+      ]
+    },
+    "PartyAtomic_SetupPotentialHostForJoining": {
+      "pattern": "48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 48 89 7C 24 ? 41 56 48 83 EC ? 48 8B 74 24 ? 41 8B F8",
+      "displacement_offset": null,
+      "matches": [
+        {
+          "file_offset": "0x03BD1A50",
+          "match_rva": "0x03BD2450",
+          "target_rva": "0x03BD2450",
+          "preferred_va": "0x7FF7D4832450"
+        }
+      ]
+    },
+    "PartyAtomic_StartJoin": {
+      "pattern": "48 89 5C 24 ? 48 89 6C 24 ? 48 89 74 24 ? 57 48 83 EC ? 41 8B F9 41 8B F0 48 8B EA 48 8B D9 E8",
+      "displacement_offset": null,
+      "matches": [
+        {
+          "file_offset": "0x03BD1B00",
+          "match_rva": "0x03BD2500",
+          "target_rva": "0x03BD2500",
+          "preferred_va": "0x7FF7D4832500"
+        }
+      ]
+    },
+    "PartyHost_PartyRestrictsF2PUsers": {
+      "pattern": "E8 ? ? ? ? 33 D2 88 87",
+      "displacement_offset": 1,
+      "matches": [
+        {
+          "file_offset": "0x027648B9",
+          "match_rva": "0x027652B9",
+          "target_rva": "0x027554E0",
+          "preferred_va": "0x7FF7D33B54E0"
+        }
+      ]
+    },
+    "g_partyData": {
+      "pattern": "48 8D 05 ? ? ? ? 4C 63 A0",
+      "displacement_offset": 3,
+      "matches": [
+        {
+          "file_offset": "0x02723B20",
+          "match_rva": "0x02724520",
+          "target_rva": "0x0F566B48",
+          "preferred_va": "0x7FF7E01C6B48"
+        }
+      ]
+    },
+    "g_partyJoinInfo": {
+      "pattern": "48 8D 0D ? ? ? ? E8 ? ? ? ? 85 C0 0F 85 ? ? ? ? 83 3D",
+      "displacement_offset": 3,
+      "matches": [
+        {
+          "file_offset": "0x01FC24F6",
+          "match_rva": "0x01FC2EF6",
+          "target_rva": "0x0F5C0AC0",
+          "preferred_va": "0x7FF7E0220AC0"
+        }
+      ]
+    }
+  }
+}

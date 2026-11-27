@@ -1,0 +1,152 @@
+{
+  "file": "Vanguard_dump.exe",
+  "sha256": "9e3cc7d78ea399b197c264e37514becef0eeeb65687bd48c3a1b7724126b46a3",
+  "image_base": "0x7ff7d0c60000",
+  "sections": [
+    [
+      ".text",
+      4096,
+      123809792,
+      1536,
+      123807232,
+      1610612768
+    ],
+    [
+      ".rdata",
+      123813888,
+      5632000,
+      123808768,
+      5630464,
+      1073741888
+    ],
+    [
+      ".data",
+      129445888,
+      255131648,
+      129439232,
+      255129600,
+      3221225536
+    ],
+    [
+      ".pdata",
+      384577536,
+      1650688,
+      384568832,
+      1648640,
+      1073741888
+    ],
+    [
+      "_RDATA",
+      386228224,
+      94208,
+      386217472,
+      92160,
+      1073741888
+    ],
+    [
+      ".rsrc",
+      386322432,
+      2273280,
+      386309632,
+      2270720,
+      1073741888
+    ],
+    [
+      ".reloc",
+      388595712,
+      327680,
+      388580352,
+      324608,
+      1073741888
+    ],
+    [
+      ".idata",
+      388923392,
+      28672,
+      388904960,
+      25600,
+      3221225536
+    ],
+    [
+      ".text",
+      388952064,
+      98136064,
+      388930560,
+      98134016,
+      1610612768
+    ]
+  ],
+  "signatures": {
+    "cg_fov": {
+      "pattern": "48 B9 7a 76 09 58 e1 c9 e0 56",
+      "displacement_offset": null,
+      "matches": [
+        {
+          "file_offset": "0x05194D0D",
+          "match_rva": "0x0519570D",
+          "target_rva": "0x0519570D",
+          "preferred_va": "0x7FF7D5DF570D",
+          "registration": {
+            "call_rva": "0x05195758",
+            "function_rva": "0x03252180",
+            "pointer_slot_rva": "0x165B0C88"
+          }
+        },
+        {
+          "file_offset": "0x055D8C5C",
+          "match_rva": "0x055D965C",
+          "target_rva": "0x055D965C",
+          "preferred_va": "0x7FF7D623965C",
+          "registration": {
+            "call_rva": "0x055D969F",
+            "function_rva": "0x03252180",
+            "pointer_slot_rva": "0x165B0C88"
+          }
+        }
+      ],
+      "name_hash": "0x56E0C9E15809767A",
+      "validated": true
+    },
+    "cg_fovScale": {
+      "pattern": "48 B9 50 20 7e c7 85 45 bd 08",
+      "displacement_offset": null,
+      "matches": [
+        {
+          "file_offset": "0x05194E0E",
+          "match_rva": "0x0519580E",
+          "target_rva": "0x0519580E",
+          "preferred_va": "0x7FF7D5DF580E",
+          "registration": {
+            "call_rva": "0x05195825",
+            "function_rva": "0x03252180",
+            "pointer_slot_rva": "0x165B0C98"
+          }
+        },
+        {
+          "file_offset": "0x055D8D4F",
+          "match_rva": "0x055D974F",
+          "target_rva": "0x055D974F",
+          "preferred_va": "0x7FF7D623974F",
+          "registration": {
+            "call_rva": "0x055D9767",
+            "function_rva": "0x03252180",
+            "pointer_slot_rva": "0x165B0C98"
+          }
+        }
+      ],
+      "name_hash": "0x08BD4585C77E2050",
+      "validated": true
+    }
+  },
+  "address_kind": "RVA; dvar destinations are global pointer slots",
+  "hash_reference": "https://github.com/purrpleeW/s4-mod/blob/fbae90d4d5276c4483fdcaa4a1ee4b3ed396ec2b/src/common/utils/hashing.hpp",
+  "hash_reference_note": "Retail c-prefix seed/prime constants; names independently corroborated by matching registrations in this dump.",
+  "validated": true,
+  "native_float_setter": {
+    "rva": "0x03253B70",
+    "prefix": "40 53 55 56 57 41 56 48 81 ec 80 00 00 00 48 8b",
+    "lua_setter_call_rva": "0x0416CD3F",
+    "call_target_rva": "0x03253B70",
+    "validated": true
+  }
+}
