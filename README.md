@@ -1,6 +1,6 @@
 # VG-CLIENT
 
-A Windows x64 component client for the supplied Vanguard retail BattleNet build. Offline menus and the Multiplayer systemlink lobby have been reached in user testing. The console keeps the requested S4-CLIENT log identity.
+A Windows x64 component client for the supplied Vanguard 1.16 BattleNet build. Offline menus and the Multiplayer systemlink lobby have been reached in user testing. The console keeps the requested S4-CLIENT log identity.
 
 ## Commands
 
