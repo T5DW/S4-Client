@@ -1,0 +1,66 @@
+{
+  "dump_sha256": "9e3cc7d78ea399b197c264e37514becef0eeeb65687bd48c3a1b7724126b46a3",
+  "menus": {
+    "MPSystemLinkMenu": {
+      "strings": [
+        {
+          "encoding": "ASCII",
+          "file_offset": "0x94c62c4",
+          "rva": "0x94c7cc4"
+        }
+      ],
+      "code_references": [],
+      "pointer_references": [
+        "0x94c8428"
+      ]
+    },
+    "MPSystemLinkLobby": {
+      "strings": [
+        {
+          "encoding": "ASCII",
+          "file_offset": "0x94c62e4",
+          "rva": "0x94c7ce4"
+        }
+      ],
+      "code_references": [],
+      "pointer_references": [
+        "0x94c8430"
+      ]
+    },
+    "CPSystemLinkMenu": {
+      "strings": [
+        {
+          "encoding": "ASCII",
+          "file_offset": "0x94c6574",
+          "rva": "0x94c7f74"
+        }
+      ],
+      "code_references": [],
+      "pointer_references": [
+        "0x94c84e8"
+      ]
+    },
+    "CPSystemLinkLobby": {
+      "strings": [
+        {
+          "encoding": "ASCII",
+          "file_offset": "0x94c6594",
+          "rva": "0x94c7f94"
+        }
+      ],
+      "code_references": [],
+      "pointer_references": [
+        "0x94c84f0"
+      ]
+    }
+  },
+  "interpretation": "CPSystemLinkLobby and CPSystemLinkMenu are co-op/Zombies candidates paired with MP names; menu existence in the dump does not verify live opening or session setup.",
+  "systemlink_signature": "E8 ? ? ? ? 84 C0 75 ? 45 33 C0 8B D3",
+  "systemlink_match": [
+    {
+      "call_rva": "0x1f630b3",
+      "target_rva": "0x35a9490",
+      "target_bytes": "32 c0 c3"
+    }
+  ]
+}
